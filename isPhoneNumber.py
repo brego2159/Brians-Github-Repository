@@ -1,6 +1,5 @@
 # Credit to Al Sweigart from his book Automate the Boring Stuff!
 
-
 def isPhoneNumber(text):
     if len(text) != 12:
        return False
@@ -18,10 +17,10 @@ def isPhoneNumber(text):
         if not text[i].isdecimal():
             return False
     return True
-
-print('Is 415-555-4242 a number?')
-print(isPhoneNumber('415-555-4242'))
-
-print('Is Moshi Moshi a phone number?')
-print(isPhoneNumber('Moshi Moshi'))
-
+    
+message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+for i in range(len(message)):
+    chunk = message[i:i+12]
+    if isPhoneNumber(chunk):
+        print('Phone number found: ' + chunk)
+print('Done')  
