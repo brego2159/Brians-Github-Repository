@@ -1,3 +1,6 @@
+# Credit to Al Sweigart from his book Automate the Boring Stuff!
+
+
 def isPhoneNumber(text):
     if len(text) != 12:
        return False
